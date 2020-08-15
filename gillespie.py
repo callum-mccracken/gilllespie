@@ -25,10 +25,8 @@ all_reactions = [
     ['Rn219', 'Po215', 1, 1, 1/3.96 * 1e15],
     ['Po215', 'Pb211', 1, 1, 1/0.001778 * 1e15],
     ['Pb211', 'Bi211', 1, 1, 1/2166 * 1e15],
-
     ['Bi211', 'Ti207', 1, 1, 1/127.8 * 1e15],
     ['Ti207', 'Pb207', 1, 1, 1/286.2 * 1e15],
-
     ['Bi211', 'Po211', 1, 1, 1/127.8 * 1e15],
     ['Po211', 'Pb207', 1, 1, 1/0.516 * 1e15],
 ]
@@ -96,4 +94,6 @@ for i in range(1, len(data[0])):
     N_list = [d[i] for d in data]
     plt.plot(t_list, N_list, label=all_names[i-1])
 plt.legend(loc='best')
+plt.xlabel("Time, in $1\\times 10^{{15}}$ seconds")
+plt.ylabel("Number of Nuclei")
 plt.show()
